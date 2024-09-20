@@ -1,0 +1,33 @@
+title: "My Rabbit Hole in Programming"
+baseURL: "https://remvn.space/"
+languageCode: "en-us"
+theme: "beautifulhugo"
+
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+
+menus:
+  main:
+    - name: Blog
+      pageRef: /
+      weight: 10
+    - name: Series
+      pageRef: /series
+      weight: 20
+    - name: Tags
+      pageRef: /tags
+      weight: 30
+
+languages:
+  en:
+    contentDir: "content/en"
+    disabled: false
+    languageName: "English"
+    weight: 1
+  vi:
+    contentDir: "content/vi"
+    disabled: false
+    languageName: "Vietnamese"
+    weight: 2
