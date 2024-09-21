@@ -2,12 +2,15 @@
 title: Neovim Part 1 - Chuyện bên lề và lý do bạn nên học Vim
 date: "2024-09-20T13:20:35+07:00"
 draft: false
+showComments: true
+description: "Mở đầu series config neovim và câu chuyện bên lề của mình."
+images: 
+- feature.svg
 series:
 - neovim-config
 tags:
 - neovim
 ---
-
 
 ## Một số lý do chính tại sao bạn nên học Vim hoặc ít nhất là Vim Motions
 
@@ -16,6 +19,8 @@ tags:
   giản nhưng mình nghĩ nó là cái khó chịu nhất khi mình code)
 - Code nhanh hơn một tí (hoặc nhiều tí nếu bạn xài đủ lâu).
 - Vim Motions dễ nhớ hơn shortcut của IDE rất nhiều.
+- Vim được cài sẵn ở hầu hết các server bạn SSH vào (hi vọng Nano user không 
+cho mình ăn gạch {{<emoji "beat_brick">}})
 
 Về Vim Motions và các khái niệm cơ bản của Vim thì trên mạng đã có rất nhiều
 rồi, bạn có thể tham khảo và áp dụng để config **Vim hàng fake** như mình đã đề
@@ -97,4 +102,5 @@ nnoremap <C-j> 5j
 " dùng Ctrl-K để di chuyển lên 5 dòng
 nnoremap <C-k> 5k
 ```
+
 

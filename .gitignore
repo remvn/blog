@@ -1,2 +1,4 @@
 /public/
 /resources/
+/conf_default/
+node_modules

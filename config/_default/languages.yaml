@@ -6,6 +6,7 @@ en:
     description: "A place where I share random things about programming."
     author:
       name: "remvn"
+      image: "images/avatar-cover.jpg"
       headline: "A place where I share random things about programming."
       bio: "A place where I share random things about programming."
       links:
@@ -19,13 +20,13 @@ vi:
     description: "Nơi mình chia sẻ linh tinh về lập trình."
     author:
       name: "remvn"
+      image: "images/avatar-cover.jpg"
       headline: "Nơi mình chia sẻ linh tinh về lập trình"
       bio: "Nơi mình chia sẻ linh tinh về lập trình"
       links:
         - email: "mailto:remvnz@gmail.com"
         - github: "https://github.com/remvn"
 # mainSections = ["section1", "section2"]
-# description = "My awesome website"
 
 # [params.author]
 # name = "Your name here"

@@ -1,0 +1,9 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-go-template": "^0.0.15"
+    }
+}

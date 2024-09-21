@@ -15,6 +15,10 @@ enableImageLazyLoading: true
 enableImageWebp: true
 fingerprintAlgorithm: sha256
 
+images:
+  - images/gopher-feature.jpg
+  - images/avatar-cover.jpg
+
 header:
   layout: basic
   showTitle: true

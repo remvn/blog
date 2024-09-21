@@ -1,0 +1,4 @@
+{{ $src := .Get "src" }}
+{{ with resources.Get $src }}
+  <img class="rounded-md" src="{{ .RelPermalink }}" />
+{{ end }}
