@@ -3,7 +3,7 @@ en:
   disabled: false
   weight: 1
   params:
-    description: "I write about Golang, Neovim, Backend Development, VueJS"
+    description: "I write about Golang, Neovim, Backend Development and VueJS"
     author:
       name: "remvn"
       image: "images/avatar-cover.jpg"
@@ -17,7 +17,7 @@ vi:
   disabled: false
   weight: 2
   params:
-    description: "Nơi mình chia sẻ về Golang, Neovim, Backend Development, VueJS"
+    description: "Nơi mình chia sẻ về Golang, Neovim, Backend Development và VueJS"
     author:
       name: "remvn"
       image: "images/avatar-cover.jpg"
