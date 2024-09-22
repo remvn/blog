@@ -1,2 +1,4 @@
 github.com/jpanther/congo/v2 v2.9.0 h1:mq1U8Zqw/F+9dk+AgH7W6Wl2M4LLiRP4v/BCTx4c01Y=
 github.com/jpanther/congo/v2 v2.9.0/go.mod h1:1S7DRoO1ZYS4YUdFd1LjTkdyjQwsjFWd8TqSfz3Jd+M=
+github.com/remvn/hugo-vmoji v0.1.1 h1:boq8S8rLfz5IGUwfzNKJaTwg0WMNTXgV2dF+rBGgqok=
+github.com/remvn/hugo-vmoji v0.1.1/go.mod h1:3MtlvWg+Tw6xF7P3fosbrxh3nn/vEbb68TXMoBWyXVM=
