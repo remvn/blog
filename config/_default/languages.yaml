@@ -3,12 +3,12 @@ en:
   disabled: false
   weight: 1
   params:
-    description: "A place where I share random things about programming."
+    description: "I write about Golang, Neovim, Backend Development, VueJS"
     author:
       name: "remvn"
       image: "images/avatar-cover.jpg"
-      headline: "A place where I share random things about programming."
-      bio: "A place where I share random things about programming."
+      headline: "Gopher"
+      bio: "Random things in Programming"
       links:
         - email: "mailto:remvnz@gmail.com"
         - github: "https://github.com/remvn"
@@ -17,12 +17,12 @@ vi:
   disabled: false
   weight: 2
   params:
-    description: "Nơi mình chia sẻ linh tinh về lập trình."
+    description: "Nơi mình chia sẻ về Golang, Neovim, Backend Development, VueJS"
     author:
       name: "remvn"
       image: "images/avatar-cover.jpg"
-      headline: "Nơi mình chia sẻ linh tinh về lập trình"
-      bio: "Nơi mình chia sẻ linh tinh về lập trình"
+      headline: "Gopher"
+      bio: "Viết lách linh tinh về lập trình"
       links:
         - email: "mailto:remvnz@gmail.com"
         - github: "https://github.com/remvn"

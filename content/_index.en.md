@@ -2,8 +2,12 @@
 title: "Hello there 👋"
 ---
 
-Mình thích viết lách chia sẻ vài thứ linh tinh và đóng góp cho **OSS**  
-Nếu bạn có gì thắc mắc thì đừng ngần ngại hỏi mình nhé. [Contact]({{< ref "/contact" >}} "Liên hệ")
+{{< img src="images/gopher-feature.jpg" >}}
 
-Những chủ đề mình yêu thích, quan tâm:  
+I enjoy writing random things here and contributing to **OSS**
+in my free time. <br>
+If you find anything interesting, feel free to ask!
+[Contact]({{< ref "/contact" >}})
+
+Topics I love to talk about: <br>
 `Golang`, `Neovim`, `Backend Development`, `VueJS`, `NuxtJS`
