@@ -2,6 +2,8 @@
 title: Neovim Part 1 - Reasons why you should learn Vim and my side story
 date: "2024-09-20T13:20:35+07:00"
 draft: false
+showComments: true
+description: "Introduction to the Neovim configuration series and my side story."
 series:
 - neovim-config
 tags:
