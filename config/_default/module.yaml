@@ -1,3 +1,14 @@
 imports:
   - path: github.com/jpanther/congo/v2
   - path: github.com/remvn/hugo-vmoji
+
+mounts:
+  - source: assets
+    target: assets
+  - source: node_modules/@builder.io/partytown/lib/partytown.js
+    target: assets/js/partytown.js
+  - source: static
+    target: static
+  - source: node_modules/@builder.io/partytown/lib
+    target: static/~partytown
+    excludeFiles: debug

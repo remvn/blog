@@ -9,10 +9,6 @@ enableRobotsTXT: true
 paginate: 10
 summaryLength: 0
 
-services:
-  googleAnalytics:
-    ID: G-D3VB7YFCTH
-
 outputs:
   home:
     - HTML

@@ -1,0 +1,25 @@
+<!-- Partytown Setup -->
+<script type="text/javascript">
+  partytown = {
+    forward: ["dataLayer.push"],
+  };
+</script>
+<script type="text/javascript">
+  {{ $partytownJs := resources.Get "js/partytown.js" | js.Build | minify }}
+  {{- $partytownJs.Content | safeJS }}
+</script>
+<!-- End Partytown -->
+
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-D3VB7YFCTH"
+></script>
+
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', "{{ .Site.Params.gtmID }}");
+</script>
