@@ -2,7 +2,7 @@
 title: "Hello there 👋"
 ---
 
-{{< img src="images/gopher-feature.jpg" >}}
+{{< img src="images/gopher-feature.jpg" alt="gopher" >}}
 
 I enjoy writing random things here and contributing to **OSS**
 in my free time. <br>

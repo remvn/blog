@@ -35,7 +35,7 @@ learning Vim, you can skip to [Part 2](#todo) if you don't want to read it 👉*
 
 It was a great day, while I was watching Youtube I came across a video:
 
-{{<youtube y6VJBeZEDZU>}}
+{{< youtube id="y6VJBeZEDZU" loading="lazy" >}}
 
 wtf, How can he be that fast? meanwhile I'm still struggling spamming `Ctrl +
 Arrow` non-stop, reach for `Home`, `End` key to move around the line in IDE.

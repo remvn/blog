@@ -36,7 +36,7 @@ lĩnh hội Vim, bạn có thể skip qua [Part 2](#TODO) không cần coi cũng
 Vào một ngày đẹp trời, trong khi đang lướt youtube thì mình bắt gặp một video
 kiểu như thế này:  
 
-{{<youtube y6VJBeZEDZU>}}
+{{< youtube id="y6VJBeZEDZU" loading="lazy" >}}
 
 wtf, tại sao lại có thể edit nhanh như vậy? trong khi nhìn lại mình thì vẫn
 đang chật vật spam `Ctrl + phím mũi tên` để di chuyển, dùng chuột chọc code
