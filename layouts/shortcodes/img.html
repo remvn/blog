@@ -1,4 +1,14 @@
 {{ $src := .Get "src" }}
+{{ $data := . }}
 {{ with resources.Get $src }}
-  <img class="rounded-md" src="{{ .RelPermalink }}" />
+  <img
+    class="rounded-md"
+    src="{{ .RelPermalink }}"
+    {{ with $data.Get "alt" }}
+      alt="{{ . }}"
+    {{ end }}
+    {{ with $data.Get "loading" }}
+      loading="{{ . }}"
+    {{ end }}
+  />
 {{ end }}

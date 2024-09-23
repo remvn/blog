@@ -2,7 +2,7 @@
 title: "Hello there 👋"
 ---
 
-{{< img src="images/gopher-feature.jpg" alt="gopher" >}}
+{{< img src="images/gopher-feature.jpg" alt="gopher" loading="lazy" >}}
 
 Mình viết lách vài thứ linh tinh ở đây và đóng góp cho **OSS** 
 trong thời gian rảnh. <br>
