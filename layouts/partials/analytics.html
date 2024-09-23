@@ -1,7 +1,7 @@
 <!-- Partytown Setup -->
 <script type="text/javascript">
   partytown = {
-    forward: ["dataLayer.push"],
+    forward: ["dataLayer.push", "fbq"],
   };
 </script>
 <script type="text/javascript">
@@ -12,14 +12,13 @@
 
 <!-- Google tag (gtag.js) -->
 <script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-D3VB7YFCTH"
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtmID }}"
 ></script>
-
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  window.gtag = function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', "{{ .Site.Params.gtmID }}");
+  gtag('config', '{{ .Site.Params.gtmID }}');
 </script>
