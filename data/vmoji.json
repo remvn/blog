@@ -1,7 +1,6 @@
 {
   "amazed": "amazed.png",
   "angry": "angry.png",
-  "angry_red": "angry_red.gif",
   "beat_brick": "beat_brick.png",
   "beat_plaster": "beat_plaster.png",
   "beat_shot": "beat_shot.png",
@@ -13,6 +12,7 @@
   "cold": "cold.png",
   "cool": "cool.png",
   "cry": "cry.png",
+  "cry-2": "cry-2.png",
   "doubt": "doubt.png",
   "dribble": "dribble.png",
   "embarrassed": "embarrassed.png",
@@ -21,6 +21,7 @@
   "look_down": "look_down.png",
   "matrix": "matrix.png",
   "misdoubt": "misdoubt.png",
+  "nem-gach": "nem-gach.png",
   "nosebleed": "nosebleed.png",
   "oh": "oh.png",
   "pudency": "pudency.png",
@@ -29,5 +30,6 @@
   "smile": "smile.png",
   "sure": "sure.png",
   "sweat": "sweat.png",
-  "waaaht": "waaaht.png"
+  "waaaht": "waaaht.png",
+  "welcome": "welcome.gif"
 }

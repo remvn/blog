@@ -4,8 +4,6 @@ date: "2024-09-20T13:20:35+07:00"
 draft: false
 showComments: true
 description: "Mở đầu series config neovim và câu chuyện bên lề của mình."
-images: 
-- feature.svg
 series:
 - neovim-config
 tags:
@@ -24,14 +22,14 @@ cho mình ăn gạch {{<emoji "beat_brick">}})
 
 Về Vim Motions và các khái niệm cơ bản của Vim thì trên mạng đã có rất nhiều
 rồi, bạn có thể tham khảo và áp dụng để config **Vim hàng fake** như mình đã đề
-cập ở đây: [Vim dành cho Jetbrains
-IDE](#bonus-cài-plugin-ideavim-cho-jetbrains-ide-và-config)
+cập ở đây:
+[Vim dành cho Jetbrains IDE](#bonus-cài-plugin-ideavim-cho-jetbrains-ide-và-config)
 
 Vì vậy series này sẽ chỉ tập trung nói về những plugin quan trọng trong 
 `Neovim` và những config rối nhất của nó (yikes 💀)
 
-*btw... dưới đây là câu chuyện bên lề mình biết tới Vim như thế nào và quá trình
-lĩnh hội Vim, bạn có thể skip qua Part 2 không cần coi cũng được 👉*
+***btw... dưới đây là câu chuyện bên lề mình biết tới Vim như thế nào và quá trình
+lĩnh hội Vim, bạn có thể skip qua [Part 2](#TODO) không cần coi cũng được 👉***
 
 ---
 
@@ -50,7 +48,7 @@ Trong sự tò mò đó thì mình cũng mò mẫm cài thử `neovim` và mò c
 Kết quả thì thực sự làm quen với vim rất khó, việc sử dụng `hjkl` để di chuyển
 thay cho phím mũi tên cộng với việc phải chuyển mode liên tục khiến mình rất
 khó chịu và sượng tay. Vì vậy sau 1-2 tiếng mò mẫm và làm quen thì mình quyết
-định từ bỏ bộ môn này 😟
+định từ bỏ bộ môn này. {{< emoji "cry-2" >}}
 
 ## 2. Thử lại với Vim trong Jetbrains IDE
 
@@ -71,6 +69,7 @@ khi phải spam phím hoặc với chuột để thao tác.
   hàng real và bắt đầu quá trình góp nhặt những plugin đơn lẻ (khá giống VS
   Code nhưng cần config nhiều hơn...) thành một bộ setup hoàn chỉnh để phục vụ
   cho công việc hiện tại của mình.
+
 * Neovim cho phép bạn tuỳ biến rất sâu cũng như nhiều plugin để lựa chọn nên
   đôi khi một số người sẽ "config" quá đà (aka nghiện config) nên khi
   plugin có **breaking changes** thì việc fix lại khá tốn thời gian. Bản thân

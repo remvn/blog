@@ -6,3 +6,6 @@ clean:
 	
 serve:
 	@./serve-local.sh
+
+generate-emoji: 
+	@hugo-vmoji

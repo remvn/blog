@@ -1,5 +1,5 @@
 ---
-title: Neovim Part 1 - Chuyện bên lề và lý do bạn nên học Vim
+title: Neovim Part 1 - Reasons why you should learn Vim and my side story
 date: "2024-09-20T13:20:35+07:00"
 draft: false
 series:
@@ -9,92 +9,90 @@ tags:
 ---
 
 
-## Một số lý do chính tại sao bạn nên học Vim hoặc ít nhất là Vim Motions
+## Some main reasons why you should learn Vim or Vim Motions at least
 
-- Dòng suy nghĩ khi code sẽ liền mạch hơn, không bị ngắt quãng như khi bạn phải
-  với lấy con chuột để chỉ để sửa 1 vài cái linh tinh (cái này nghe có vẻ đơn
-  giản nhưng mình nghĩ nó là cái khó chịu nhất khi mình code)
-- Code nhanh hơn một tí (hoặc nhiều tí nếu bạn xài đủ lâu).
-- Vim Motions dễ nhớ hơn shortcut của IDE rất nhiều.
+- Your thought process will mostly be a straight line, no interruptions, like
+  having to reach the mouse just to fix some stupid piece of code (this may
+  sound trivial but it's the most annoying part when I code)
+- Improve coding speed a little bit (or a lot faster If you use it long enough)
+- Vim Motions are easier to remember than IDE shortcuts.
+- Vim is pre-installed on most servers you SSH into (let's pretend Nano isn't here)
 
-Về Vim Motions và các khái niệm cơ bản của Vim thì trên mạng đã có rất nhiều
-rồi, bạn có thể tham khảo và áp dụng để config **Vim hàng fake** như mình đã đề
-cập ở đây: [Vim dành cho Jetbrains
-IDE](#bonus-cài-plugin-ideavim-cho-jetbrains-ide-và-config)
+There are already plenty of resources about `Vim` and `Vim Motions` online. You
+can do some quick research and use it to config `Vim in Jetbrains IDE` like I
+mention here:
+[Vim for Jetbrains IDE](#bonus-how-to-install-ideavim-for-jetbrains-ide-and-config)
 
-Vì vậy nên series này sẽ chỉ tập trung nói về những plugin quan trọng trong 
-`Neovim` và những config rối nhất của nó (yikes 💀)
+With that being said. This series mostly talks about important plugins in
+`Neovim` and it's most confusing configuration. (yikes 💀)
 
-*btw... dưới đây là câu chuyện bên lề mình biết tới Vim như thế nào và quá trình
-lĩnh hội Vim, bạn có thể skip qua Part 2 không cần coi cũng được 👉*
+***btw... below is a side story of how I came to know Vim and my journey of
+learning Vim, you can skip to [Part 2](#todo) if you don't want to read it 👉***
 
 ---
 
-Vào một ngày đẹp trời, trong khi đang lướt youtube thì mình bắt gặp một video
-kiểu như thế này:  
+It was a great day, while I was watching Youtube I came across a video:
 
 {{<youtube y6VJBeZEDZU>}}
 
-wtf, tại sao lại có thể edit nhanh như vậy? trong khi nhìn lại mình thì vẫn
-đang chật vật spam `Ctrl + phím mũi tên` để di chuyển, dùng chuột chọc code
-trong IDE.
+wtf, How can he be that fast? meanwhile I'm still struggling spamming `Ctrl +
+Arrow` non-stop, reach for `Home`, `End` key to move around the line in IDE.
 
-## 1. Bỏ cuộc vì quá khó.
+## 1. It feels so hard and I can't withstand it
 
-Trong sự tò mò đó thì mình cũng mò mẫm cài thử `neovim` và mò cách sử dụng...
-Kết quả thì thực sự làm quen với vim rất khó, việc sử dụng `hjkl` để di chuyển
-thay cho phím mũi tên cộng với việc phải chuyển mode liên tục khiến mình rất
-khó chịu và sượng tay. Vì vậy sau 1-2 tiếng mò mẫm và làm quen thì mình quyết
-định từ bỏ bộ môn này 😟
+With that curiousity. I try to install and learn how to use `Neovim`... The
+result? kind of disappointing when I can't even move around properly using
+`hjkl` keys, it just feels so hard to be begin with. As a result, I quit using 
+it after the first 2 hours. {{< emoji "cry-2" >}}
 
-## 2. Thử lại với Vim trong Jetbrains IDE
+## 2. Try again with Vim inside Jetbrains IDE
 
-Khoảng 1 tháng sau lần thất bại đó thì mình tìm hiểu được là có thể sử dụng
-`Vim` trong chính những editor phổ biến hiện nay như `VS Code`, `Jetbrains
-IDE`. Vì vậy nên mình quyết định cài plugin `IdeaVim` cho Jetbrains IDE và thử
-lại một lần nữa. `Jetbrains IDE` mà mình đang nhắc đến ở đây cụ thể là
-[Goland](https://www.jetbrains.com/go/)
+About one month later. I discovered that I can use `Vim` inside those popular 
+IDE like `VS Code` and `Jetbrains IDE`. So I decided to give it another try 
+with `IdeaVim plugin` in [Goland](https://www.jetbrains.com/go/)
 
-Kết quả có vẻ khả quan hơn lần trước, tốc độ code của mình ban đầu chậm hơn so
-với khi không dùng `Vim` nhưng được cải thiện dần dần. Sau khoảng 1 tháng tinh
-chỉnh, làm quen thì tốc độ nhanh hơn rõ rệt và không còn bị cảm giác khó chịu
-khi phải spam phím hoặc với chuột để thao tác. 
+The result seems promising, my coding speed with Vim is slower than normal but
+it's increasing steadily. After 1 month forcing myself to use it and tinkering
+around the config I noticed my coding speed is significantly faster than before.
+Now I know why Vim Motions are like this, it's much easier to remember and more
+intuitive to use.
 
-## 3. Chuyển qua ăn hành cùng Neovim...
+## 3. Feeling I'm capable of using Neovim
 
-* Sau một khoảng thời gian đủ lâu thì mình quyết định chuyển sang dùng `Neovim`
-  hàng real và bắt đầu quá trình góp nhặt những plugin đơn lẻ (khá giống VS
-  Code nhưng cần config nhiều hơn...) thành một bộ setup hoàn chỉnh để phục vụ
-  cho công việc hiện tại của mình.
-* Neovim cho phép bạn tuỳ biến rất sâu cũng như nhiều plugin để lựa chọn nên
-  đôi khi một số người sẽ "config" quá đà (aka nghiện config) nên khi
-  plugin có **breaking changes** thì việc fix lại khá tốn thời gian. Bản thân
-  mình thì sẽ ưu tiên mặc định nhiều nhất có thể và chỉ config những cái mà
-  mình cảm thấy thật sự cần + không cài quá nhiều plugin linh tinh
+* After a long enough time with `IdeaVim`. I decided to switch to `Neovim`,
+  starting with some tutorial and collecting individual plugins (sounds very
+  similar to VS Code but need a lot more configuration {{< emoji "beat_brick"
+  >}}). Finally, I have a complete setup for my current job.
 
-## Bonus: Cài plugin IdeaVim cho Jetbrains IDE và config
+* Neovim allows you to change it pretty much everything alongside with lot of
+  community plugins, so it's very easy to over-engineer the config, making it
+  quite time-consuming to fix things when plugins have breaking-changes.
+  Personally I prioritize using default as much as possible and only config the
+  things I truly need and try not to install too many random plugins.
 
-tl;dr: đây là plugin mô phỏng lại một phần những gì Vim có thể làm được 
-trong chính Jetbrains IDE. Cũng có thể nói đây là hàng fake
+## Bonus: How to install IdeaVim for Jetbrains IDE and config
 
-1. Settings -> Marketplace tìm `IdeaVim` và cài như bình thường 
+**tl;dr:** this plugin mimics some capabilities of Vim inside Jetbrains IDE. It
+can be called a `Vim Emulator` 
+
+1. Settings -> Marketplace -> Find `IdeaVim` and install it:
 ![IdeaVim](ideavim-install.png)
 
-2. Tạo file config `.ideavimrc` ở đường dẫn sau:
-- Trên Linux/MacOS: `~/.ideavimrc`
-- Trên Windows: `C:\Users\<username của bạn>\.ideavimrc`
+2. Create a config file `.ideavimrc` at:
+- On Linux/MacOS: `~/.ideavimrc`
+- On Windows: `C:\Users\<your-username>\.ideavimrc`
 
-3. Paste đoạn config mẫu này vào: 
+3. Paste the following:
 ```vim
 set clipboard+=unnamed
 set surround
 set ideajoin
 
-" jk để thoát insert mode
+" jk to exit Insert mode
 inoremap jk <Esc>
-" dùng Ctrl-J để di chuyển xuống 5 dòng
+" use Ctrl-J to move down 5 lines
 nnoremap <C-j> 5j 
-" dùng Ctrl-K để di chuyển lên 5 dòng
+" use Ctrl-K to move up 5 lines
 nnoremap <C-k> 5k
 ```
 

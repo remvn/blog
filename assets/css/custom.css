@@ -5,6 +5,7 @@ html {
 
 img.emoji {
     display: inline-block;
+    vertical-align: text-bottom;
     height: 1.25em;
     width: auto;
     margin: 0;
