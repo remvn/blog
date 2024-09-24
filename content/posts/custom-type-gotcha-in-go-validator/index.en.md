@@ -152,7 +152,9 @@ the box {{< emoji "canny" >}}. It also explains why:
    struct, it tried to check every field of that struct, the check will pass if
    one of them is not zero-value. This is also why I put a non-empty string on
    purpose to make the test failing, proving that `Valid = false` means
-   nothing.
+   nothing.<br>
+   * Have a read about `required` tag here:
+     [docs](https://pkg.go.dev/github.com/go-playground/validator/v10#hdr-Required)
 
 2. With the knowledge above, it's easier to understand why [second
    test](#2nd-test) is failing, since now it tried to check **"the length of the
