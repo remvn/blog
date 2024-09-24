@@ -5,7 +5,7 @@ goldmark:
   renderer:
     unsafe: true
 highlight:
-  noClasses: false
+  noClasses: true
 tableOfContents:
   startLevel: 2
   endLevel: 4
