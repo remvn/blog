@@ -57,29 +57,27 @@ query params and query result, for example:
 
 It turns this query: (note that the comment is mandatory)
 ```sql
--- name: GetAuthor :one
-SELECT * FROM authors
-WHERE id = $1 LIMIT 1;
+-- name: CreateAuthor :one
+INSERT INTO author (name, bio)
+VALUES (lower(@name), @bio)
+RETURNING *;
 ```
 
-In to this type-safe Go code, ready to use:
+Into this type-safe Go code, ready to use:
 ```go
 const createAuthor = `-- name: CreateAuthor :one
-INSERT INTO authors (
-  name, bio
-) VALUES (
-  $1, $2
-)
+INSERT INTO author (name, bio)
+VALUES (lower($1), $2)
 RETURNING id, name, bio
 `
 
 type CreateAuthorParams struct {
-	Name string
-	Bio  sql.NullString
+	Name string      `db:"name" json:"name"`
+	Bio  pgtype.Text `db:"bio" json:"bio"`
 }
 
 func (q *Queries) CreateAuthor(ctx context.Context, arg CreateAuthorParams) (Author, error) {
-	row := q.db.QueryRowContext(ctx, createAuthor, arg.Name, arg.Bio)
+	row := q.db.QueryRow(ctx, createAuthor, arg.Name, arg.Bio)
 	var i Author
 	err := row.Scan(&i.ID, &i.Name, &i.Bio)
 	return i, err
