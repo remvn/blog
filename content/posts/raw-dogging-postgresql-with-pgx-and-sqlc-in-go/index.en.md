@@ -99,6 +99,12 @@ write raw SQL:
 
 #### Named argument & collect rows:
 ```go
+type Author struct {
+	Id   int         `db:"id"`
+	Name string      `db:"name"`
+	Bio  pgtype.Text `db:"bio"`
+}
+
 func pgxInsert(db *database.Database, name string, bio pgtype.Text) (Author, error) {
 	// use named arguments instead $1, $2, $3...
 	query := `INSERT INTO author (name, bio) VALUES (@name, @bio) RETURNING *`
