@@ -98,6 +98,13 @@ query.
 write raw SQL: 
 
 #### Named argument & collect rows:
+
+* You can use *named arguments* (@id, @name, @description...) as placeholder
+  instead of positional placeholder ($1, $2, $3...)
+* Collect rows to array of struct using helper function instead of scanning
+  manually:
+  [pgx.RowToStructByName](https://pkg.go.dev/github.com/jackc/pgx/v5#RowToStructByName)
+
 ```go
 type Author struct {
 	Id   int         `db:"id"`
@@ -124,6 +131,7 @@ func pgxInsert(db *database.Database, name string, bio pgtype.Text) (Author, err
 ```
 
 #### Bulk insert with [Postgres's COPY](https://www.postgresql.org/docs/current/sql-copy.html):
+
 ```go
 func pgxCopyInsert(db *database.Database, authors []Author) (int64, error) {
 	rows := [][]any{}
@@ -143,8 +151,8 @@ func pgxCopyInsert(db *database.Database, authors []Author) (int64, error) {
 }
 ```
 
-Implementation detail can be found in the tutorial [down
-here](#pgx-and-sqlc-tutorial)
+More example can be found here: [Github
+repo](https://github.com/remvn/go-pgx-sqlc)
 
 ### Summary 
 
@@ -275,3 +283,4 @@ go test -v ./...
 With the implementation of [testcontainer for
 go](https://golang.testcontainers.org/), it will create a postgres container on
 the fly and run integration test on that database!
+
