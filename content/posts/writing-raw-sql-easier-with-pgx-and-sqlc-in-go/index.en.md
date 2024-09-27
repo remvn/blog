@@ -1,15 +1,17 @@
 ---
-title: Raw-dogging PostgreSQL with pgx and sqlc in Go
+title: Writing raw SQL easier with pgx and sqlc in Go
 date: "2024-09-25T17:32:18+07:00"
 draft: false
 showComments: true
-description: "Raw-dogging PostgreSQL made easier and less error-prone using the
-combination of pgx and sqlc in Go"
+description: "Writing raw sql easier and less error-prone using the
+combination of pgx and sqlc in Go & PostgresSQL"
 tags:
 - golang
 - database
 - postgres
 - sql
+aliases:
+- raw-dogging-postgresql-with-pgx-and-sqlc-in-go
 ---
 
 ## What is pgx and sqlc? 
@@ -36,10 +38,9 @@ harder to implement properly in these `ORM`, sometime it's even harder than
 writing raw query manually (try adding an upsert or
 [CTE](https://www.postgresql.org/docs/current/queries-with.html)),
 to the point you have to pull out the big gun... yes, you grab the database
-driver under the wrapper and start raw-dogging query, map the types manually
-and questioning yourself why you chose to use an ORM in the first place. {{<
-emoji "beat_shot"
->}}
+driver under the wrapper and start writing raw query, map the types manually
+and questioning yourself why you chose to use an ORM in the first
+place. {{< emoji "beat_shot" >}}
 
 Another foot gun of `ORM` is that you generally can't control the `SQL query`
 they produce, they may do dumb things and write terrible queries. Here's a funny 
