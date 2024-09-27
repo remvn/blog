@@ -129,6 +129,43 @@ func pgxInsert(db *database.Database, name string, bio pgtype.Text) (Author, err
 	// use collect helper function instead of scanning rows
 	return pgx.CollectOneRow(rows, pgx.RowToStructByName[Author])
 }
+
+func pgxSelect(db *database.Database, id int) (Author, error) {
+	// notice that I dont select id
+	// and use RowToStructByNameLax to allows some of the column missing
+	query := `SELECT name, bio from author where id = @id`
+	args := pgx.NamedArgs{
+		"id": id,
+	}
+
+	rows, err := db.Pool.Query(context.Background(), query, args)
+	if err != nil {
+		return Author{}, err
+	}
+	defer rows.Close()
+
+	return pgx.CollectOneRow(rows, pgx.RowToStructByNameLax[Author])
+}
+
+func pgxSelectAllId(db *database.Database) ([]int, error) {
+	query := `SELECT id from author`
+
+	rows, err := db.Pool.Query(context.Background(), query)
+	if err != nil {
+		return []int{}, err
+	}
+	defer rows.Close()
+
+	idArr := []int{}
+	idArr, err = pgx.AppendRows(idArr, rows, pgx.RowTo[int])
+	// use this if you dont need appending to slice
+	// idArr, err := pgx.CollectRows(rows, pgx.RowTo[int])
+	if err != nil {
+		return []int{}, err
+	}
+
+	return idArr, nil
+}
 ```
 
 #### Bulk insert with [Postgres's COPY](https://www.postgresql.org/docs/current/sql-copy.html):
@@ -153,7 +190,7 @@ func pgxCopyInsert(db *database.Database, authors []Author) (int64, error) {
 ```
 
 More example can be found here: [Github
-repo](https://github.com/remvn/go-pgx-sqlc)
+repo](https://github.com/remvn/go-pgx-sqlc/blob/main/database/database_test.go)
 
 ### Summary 
 
