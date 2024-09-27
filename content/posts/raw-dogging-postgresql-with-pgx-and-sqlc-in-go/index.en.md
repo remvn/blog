@@ -99,9 +99,10 @@ write raw SQL:
 
 #### Named argument & collect rows:
 
-* You can use *named arguments* (@id, @name, @description...) as placeholder
-  instead of positional placeholder ($1, $2, $3...)
-* Collect rows to array of struct using helper function instead of scanning
+* **Named arguments** (@id, @name, @description...) as placeholder instead of
+  positional placeholder ($1, $2, $3...):
+  [pgx.NamedArgs](https://pkg.go.dev/github.com/jackc/pgx/v5#NamedArgs)
+* **Collect rows to array of struct** using helper function instead of scanning
   manually:
   [pgx.RowToStructByName](https://pkg.go.dev/github.com/jackc/pgx/v5#RowToStructByName)
 
