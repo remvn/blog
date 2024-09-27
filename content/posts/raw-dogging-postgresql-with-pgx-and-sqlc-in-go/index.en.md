@@ -97,7 +97,7 @@ query.
 `pgx` also comes with plenty of useful tools which made it easier to
 write raw SQL: 
 
-#### Named argument & collect rows:
+#### 1. Named argument & collect rows:
 
 * **Named arguments** (@id, @name, @description...) as placeholder instead of
   positional placeholder ($1, $2, $3...):
@@ -106,6 +106,7 @@ write raw SQL:
   manually:
   [pgx.RowToStructByName](https://pkg.go.dev/github.com/jackc/pgx/v5#RowToStructByName)
 
+*Insert with named argument*
 ```go
 type Author struct {
 	Id   int         `db:"id"`
@@ -129,7 +130,10 @@ func pgxInsert(db *database.Database, name string, bio pgtype.Text) (Author, err
 	// use collect helper function instead of scanning rows
 	return pgx.CollectOneRow(rows, pgx.RowToStructByName[Author])
 }
+```
 
+*Select and collect one row*
+```go
 func pgxSelect(db *database.Database, id int) (Author, error) {
 	// notice that I dont select id
 	// and use RowToStructByNameLax to allows some of the column missing
@@ -146,7 +150,10 @@ func pgxSelect(db *database.Database, id int) (Author, error) {
 
 	return pgx.CollectOneRow(rows, pgx.RowToStructByNameLax[Author])
 }
+```
 
+*Select, collect and append to slice*
+```go
 func pgxSelectAllId(db *database.Database) ([]int, error) {
 	query := `SELECT id from author`
 
@@ -156,10 +163,10 @@ func pgxSelectAllId(db *database.Database) ([]int, error) {
 	}
 	defer rows.Close()
 
+    // use this if you dont need appending to slice
+    // idArr, err := pgx.CollectRows(rows, pgx.RowTo[int])
 	idArr := []int{}
 	idArr, err = pgx.AppendRows(idArr, rows, pgx.RowTo[int])
-	// use this if you dont need appending to slice
-	// idArr, err := pgx.CollectRows(rows, pgx.RowTo[int])
 	if err != nil {
 		return []int{}, err
 	}
@@ -168,7 +175,7 @@ func pgxSelectAllId(db *database.Database) ([]int, error) {
 }
 ```
 
-#### Bulk insert with [Postgres's COPY](https://www.postgresql.org/docs/current/sql-copy.html):
+#### 2. Bulk insert with [Postgres's COPY](https://www.postgresql.org/docs/current/sql-copy.html):
 
 ```go
 func pgxCopyInsert(db *database.Database, authors []Author) (int64, error) {
@@ -189,7 +196,7 @@ func pgxCopyInsert(db *database.Database, authors []Author) (int64, error) {
 }
 ```
 
-More example can be found here: [Github
+Examples can be found here: [Github
 repo](https://github.com/remvn/go-pgx-sqlc/blob/main/database/database_test.go)
 
 ### Summary 
